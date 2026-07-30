@@ -36,6 +36,20 @@ const NOTES_INDEX = [
     file: "notes/geologia-pedologia.md"
   },
   {
+    slug: "introdução-hidrica",
+    title: "Introdução à Engenharia Hídrica",
+    category: "Engenharia",
+    semester: "1º Semestre",
+    file: "notes/pnrh.md"
+  },
+  {
+    slug: "quimica-geral",
+    title: "Química Geral",
+    category: "Química",
+    semester: "1º Semestre",
+    file: "notes/quimica.md"
+  },
+  {
     slug: "hidrologia-basica",
     title: "Hidrologia básica: ciclo e balanço hídrico",
     category: "Hidrologia",
