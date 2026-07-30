@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anotações — Engenharia Hídrica</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+<style>
+  .notes-layout {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 40px;
+    padding: 40px 0 80px;
+    align-items: start;
+  }
+  .notes-sidebar {
+    position: sticky;
+    top: 84px;
+    border-right: 1px solid var(--line);
+    padding-right: 24px;
+  }
+  .notes-sidebar h2 {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    color: var(--ink-soft);
+    margin: 0 0 14px;
+  }
+  .notes-sidebar .group { margin-bottom: 6px; border-bottom: 1px solid var(--line); }
+  .notes-sidebar .group-title {
+    all: unset;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    cursor: pointer;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--teal-deep);
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    font-weight: 600;
+    padding: 12px 0;
+  }
+  .notes-sidebar .group-title:hover { color: var(--teal); }
+  .notes-sidebar .group-title .count {
+    font-weight: 400;
+    color: var(--ink-soft);
+    margin-left: 8px;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+  .notes-sidebar .group-title .chevron {
+    transition: transform .2s ease;
+    color: var(--ink-soft);
+    font-size: 10px;
+  }
+  .notes-sidebar .group.open .group-title .chevron { transform: rotate(90deg); }
+  .notes-sidebar .group-body {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows .18s ease;
+  }
+  .notes-sidebar .group.open .group-body { grid-template-rows: 1fr; }
+  .notes-sidebar .group-body > div { overflow: hidden; }
+  .notes-sidebar .group ul { margin: 0; padding-bottom: 12px; }
+  .notes-sidebar ul { list-style: none; margin: 0; padding: 0; }
+  .notes-sidebar li a {
+    display: block;
+    padding: 7px 0;
+    text-decoration: none;
+    color: var(--ink);
+    font-size: 14px;
+    border-left: 2px solid transparent;
+    padding-left: 10px;
+    margin-left: -10px;
+  }
+  .notes-sidebar li a:hover { color: var(--teal); }
+  .notes-sidebar li a.active { color: var(--teal-deep); border-left-color: var(--teal); font-weight: 600; }
+  .notes-sidebar li a { line-height: 1.35; }
+  .notes-sidebar .side-tag {
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+    letter-spacing: .04em;
+  }
+
+  .note-content {
+    background: var(--bg-panel);
+    border: 1px solid var(--line);
+    padding: 44px 52px;
+    min-height: 60vh;
+  }
+  .note-content h1 { font-family: var(--font-display); color: var(--teal-deep); font-size: 2rem; margin-top: 0; }
+  .note-content h2 { font-family: var(--font-display); color: var(--teal-deep); font-size: 1.4rem; margin-top: 2em; }
+  .note-content h3 { color: var(--teal); font-size: 1.1rem; }
+  .note-content p, .note-content li { color: var(--ink-soft); }
+  .note-content code {
+    font-family: var(--font-mono);
+    background: var(--bg);
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: .9em;
+    color: var(--teal-deep);
+  }
+  .note-content pre {
+    background: var(--ink);
+    color: #EAF3F2;
+    padding: 18px 20px;
+    overflow-x: auto;
+    border-radius: 4px;
+  }
+  .note-content pre code { background: none; color: inherit; padding: 0; }
+  .note-content blockquote {
+    border-left: 3px solid var(--teal);
+    margin: 1.4em 0;
+    padding: 2px 20px;
+    color: var(--ink-soft);
+    background: var(--bg);
+  }
+  .note-content table { border-collapse: collapse; width: 100%; }
+  .note-content th, .note-content td { border: 1px solid var(--line); padding: 8px 12px; text-align: left; font-size: 14px; }
+  .note-content th { background: var(--bg); font-family: var(--font-mono); font-size: 12px; }
+  .note-loading { color: var(--ink-soft); font-family: var(--font-mono); font-size: 14px; }
+
+  @media (max-width: 800px) {
+    .notes-layout { grid-template-columns: 1fr; }
+    .notes-sidebar { position: static; border-right: none; border-bottom: 1px solid var(--line); padding-bottom: 20px; }
+    .note-content { padding: 28px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="index.html" class="nav-brand">seu-nome / eng-hidrica</a>
+    <ul class="nav-links">
+      <li><a href="index.html#sobre">Sobre</a></li>
+      <li><a href="index.html#competencias">Competências</a></li>
+      <li><a href="index.html#formacao">Formação</a></li>
+      <li><a href="index.html#projetos">Projetos</a></li>
+      <li><a href="notes.html" class="active">Anotações</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="wrap notes-layout">
+  <aside class="notes-sidebar" id="sidebar">
+    <h2>Anotações do curso</h2>
+    <div id="sidebar-groups"></div>
+  </aside>
+
+  <article class="note-content" id="note-content">
+    <p class="note-loading">Carregando…</p>
+  </article>
+</main>
+
+<footer class="wrap">
+  <span>© <span id="year"></span> Seu Nome — Engenharia Hídrica</span>
+  <span>Escrito em Markdown, versionado no repositório.</span>
+</footer>
+
+<script src="js/notes.js"></script>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+const contentEl = document.getElementById('note-content');
+const groupsEl = document.getElementById('sidebar-groups');
+
+// Build sidebar grouped by semester, preserving the order semesters first
+// appear in NOTES_INDEX (not alphabetical, so "1º Semestre" stays on top).
+const bySemester = {};
+const semesterOrder = [];
+NOTES_INDEX.forEach(n => {
+  const key = n.semester || "Sem semestre definido";
+  if (!bySemester[key]) {
+    bySemester[key] = [];
+    semesterOrder.push(key);
+  }
+  bySemester[key].push(n);
+});
+
+semesterOrder.forEach(sem => {
+  const notes = bySemester[sem];
+  const group = document.createElement('div');
+  group.className = 'group';
+
+  const title = document.createElement('button');
+  title.type = 'button';
+  title.className = 'group-title';
+  title.innerHTML = `<span>${sem} <span class="count">(${notes.length})</span></span><span class="chevron">▶</span>`;
+  title.addEventListener('click', () => group.classList.toggle('open'));
+  group.appendChild(title);
+
+  const body = document.createElement('div');
+  body.className = 'group-body';
+  const inner = document.createElement('div');
+
+  const ul = document.createElement('ul');
+  notes.forEach(n => {
+    const li = document.createElement('li');
+    const a = document.createElement('a');
+    a.href = `#${n.slug}`;
+    a.dataset.slug = n.slug;
+    a.innerHTML = `${n.title}<br><span class="side-tag">${n.category}</span>`;
+    li.appendChild(a);
+    ul.appendChild(li);
+  });
+  inner.appendChild(ul);
+  body.appendChild(inner);
+  group.appendChild(body);
+  groupsEl.appendChild(group);
+});
+
+function openGroupFor(slug) {
+  document.querySelectorAll('.notes-sidebar a').forEach(a => {
+    const isActive = a.dataset.slug === slug;
+    a.classList.toggle('active', isActive);
+    if (isActive) {
+      const group = a.closest('.group');
+      if (group) group.classList.add('open');
+    }
+  });
+}
+
+async function loadNote(slug) {
+  const note = NOTES_INDEX.find(n => n.slug === slug) || NOTES_INDEX[0];
+  if (!note) {
+    contentEl.innerHTML = '<p>Nenhuma anotação encontrada.</p>';
+    return;
+  }
+  openGroupFor(note.slug);
+  contentEl.innerHTML = '<p class="note-loading">Carregando…</p>';
+  try {
+    const res = await fetch(note.file);
+    if (!res.ok) throw new Error('not found');
+    const md = await res.text();
+    contentEl.innerHTML = marked.parse(md);
+  } catch (e) {
+    contentEl.innerHTML = `<p class="note-loading">Não foi possível carregar "${note.file}".
+    Se estiver rodando localmente, sirva os arquivos com um servidor
+    (ex: <code>python3 -m http.server</code>) — abrir o HTML direto do disco
+    bloqueia o fetch() do arquivo .md.</p>`;
+  }
+}
+
+function currentSlug() {
+  return (location.hash || '').replace('#', '') || NOTES_INDEX[0].slug;
+}
+
+window.addEventListener('hashchange', () => loadNote(currentSlug()));
+loadNote(currentSlug());
+</script>
+</body>
+</html>
