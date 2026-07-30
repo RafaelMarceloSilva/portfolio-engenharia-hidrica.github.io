@@ -29,6 +29,13 @@ const NOTES_INDEX = [
     file: "notes/cto.md"
   },
   {
+    slug: "geologia-pedologia",
+    title: "Geologia e Pedologia",
+    category: "Sociologia",
+    semester: "1º Semestre",
+    file: "notes/geologia-pedologia.md"
+  },
+  {
     slug: "hidrologia-basica",
     title: "Hidrologia básica: ciclo e balanço hídrico",
     category: "Hidrologia",
