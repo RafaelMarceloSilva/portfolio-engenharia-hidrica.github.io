@@ -8,6 +8,13 @@
 // dentro de cada semestre — a lista é exibida na ordem em que está aqui.
 const NOTES_INDEX = [
   {
+    slug: "biologia-sanitaria",
+    title: "Biologia Sanitária",
+    category: "Biologia",
+    semester: "1º Semestre",
+    file: "notes/biologia-sanitaria.md"
+  },
+  {
     slug: "calculo-1",
     title: "Cálculo 1: limites, derivadas e integrais",
     category: "Cálculo I",
