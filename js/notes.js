@@ -22,6 +22,13 @@ const NOTES_INDEX = [
     file: "notes/calculo-1.md"
   },
   {
+    slug: "cto",
+    title: "Ciência, Tecnologia e Organização",
+    category: "Sociologia",
+    semester: "1º Semestre",
+    file: "notes/cto.md"
+  },
+  {
     slug: "hidrologia-basica",
     title: "Hidrologia básica: ciclo e balanço hídrico",
     category: "Hidrologia",

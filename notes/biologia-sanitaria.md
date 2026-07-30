@@ -78,42 +78,6 @@ Ou seja, a relação A/V é **inversamente proporcional ao raio** — quanto mai
 
 ---
 
-## 3.1. Diferença entre Células Procariontes e Eucariontes
-
-As células são divididas em dois grandes tipos estruturais, cuja principal diferença está na presença ou ausência de **núcleo organizado** e **organelas membranosas**:
-
-| Característica | Procariontes | Eucariontes |
-|---|---|---|
-| **Núcleo** | Ausente (material genético disperso no citoplasma, em região chamada **nucleoide**) | Presente, delimitado por **carioteca** (envelope nuclear) |
-| **Organelas membranosas** | Ausentes | Presentes (mitocôndrias, retículo endoplasmático, complexo de Golgi, etc.) |
-| **Tamanho** | Menores (em geral 0,1 a 5 µm) | Maiores (em geral 10 a 100 µm) |
-| **DNA** | Circular, único, disperso no citoplasma (nucleoide); pode conter plasmídios | Linear, organizado em cromossomos, dentro do núcleo |
-| **Ribossomos** | Presentes, porém menores (70S) | Presentes, maiores (80S) |
-| **Parede celular** | Presente na maioria (peptidoglicano em bactérias) | Presente em plantas (celulose) e fungos (quitina); ausente em células animais |
-| **Reprodução** | Assexuada, por **fissão binária** (divisão simples e rápida) | Pode ser assexuada (mitose) ou sexuada (meiose), processos mais complexos |
-| **Organização** | Predominantemente unicelulares | Podem ser unicelulares ou multicelulares |
-| **Exemplos** | Bactérias e Archaeas | Protistas, Fungos, Plantas e Animais |
-
-- A ausência de organelas membranosas nos procariontes não significa menor eficiência metabólica — como visto no Tópico 3, sua alta relação área/volume compensa essa limitação estrutural
-- Os eucariontes, por serem compartimentalizados (organelas isolando funções específicas), conseguem realizar reações bioquímicas simultâneas e mais especializadas sem que uma interfira na outra
-
----
-
-## 3.2. Archaeas
-
-As Archaeas formam um dos três Domínios propostos por Carl Woese (1977), e apesar de serem procariontes (sem núcleo organizado, como as bactérias), possuem características únicas que as diferenciam tanto das Bactérias quanto dos Eucariontes:
-
-- **Parede celular:** não possuem peptidoglicano (diferente das bactérias); sua parede é composta por outras substâncias, como **pseudopeptidoglicano** (pseudomureína) ou glicoproteínas, o que explica por que **não coram pela técnica de Gram** (ver Tópico 4)
-- **Membrana plasmática:** possui lipídios com ligações **éter** (diferente da ligação éster encontrada em Bactérias e Eucariontes), o que confere maior estabilidade em condições extremas de temperatura e pH
-- **Genética:** apesar de serem procariontes estruturalmente, sua maquinaria de transcrição e tradução (RNA polimerase, proteínas ribossômicas) é mais parecida com a dos **Eucariontes** do que com a das Bactérias
-- **Habitat:** muitas são **extremófilas**, vivendo em ambientes de condições extremas:
-  - **Termófilas/Hipertermófilas:** altas temperaturas (fontes hidrotermais, gêiseres)
-  - **Halófilas:** ambientes com altíssima concentração de sal
-  - **Acidófilas/Alcalófilas:** ambientes de pH muito baixo ou muito alto
-  - **Metanogênicas:** produzem metano como subproduto do metabolismo, geralmente em ambientes anaeróbios (ex.: pântanos, trato digestivo de ruminantes)
-
----
-
 ## 4. Coloração de Gram
 
 Técnica de coloração diferencial usada para classificar bactérias com base na estrutura da parede celular.
@@ -135,22 +99,6 @@ Técnica de coloração diferencial usada para classificar bactérias com base n
 
 ---
 
-## 4.1. Papel da Parede de Peptidoglicano
-
-O peptidoglicano (também chamado de mureína) é uma macromolécula exclusiva das **paredes celulares bacterianas**, formada por uma malha de:
-- **Cadeias de açúcares** (N-acetilglicosamina e ácido N-acetilmurâmico, alternados)
-- **Cadeias curtas de aminoácidos** que fazem ligações cruzadas entre as cadeias de açúcares, formando uma estrutura em rede tridimensional
-
-**Funções do peptidoglicano:**
-- **Sustentação e forma:** confere rigidez à célula, definindo seu formato (cocos, bacilos, espirilos, etc.)
-- **Proteção mecânica:** protege a célula contra rompimento por **pressão osmótica** — sem essa parede rígida, a entrada de água por osmose faria a célula estourar (lise osmótica)
-- **Diferenciação Gram:** a espessura da camada de peptidoglicano determina se a bactéria retém ou não o corante na coloração de Gram (ver Tópico 4)
-- **Alvo terapêutico:** é o alvo de diversos antibióticos, como a **penicilina**, que inibe a síntese do peptidoglicano, impedindo a bactéria de construir uma parede funcional — o que a torna vulnerável à lise
-
-- **Importante:** como visto no Tópico 3.2, as Archaeas **não possuem peptidoglicano** — por isso não são sensíveis a antibióticos que atuam sobre essa estrutura (como a penicilina), e também não coram pela técnica de Gram
-
----
-
 ## 5. Postulados de Koch
 
 Conjunto de critérios criados para **provar a relação causal** entre um microrganismo específico e uma doença.
@@ -161,24 +109,6 @@ Conjunto de critérios criados para **provar a relação causal** entre um micro
 - **Postulado do Reisolamento:** o mesmo microrganismo deve ser **reisolado** do hospedeiro experimental que adoeceu
 
 - Se a inoculação do agente isolado não causar a doença em um hospedeiro saudável, significa que a relação de causalidade entre aquele agente e a doença **não foi confirmada**, pois o terceiro postulado falhou
-
----
-
-## 5.1. Função de Cada Organela na Célula (Eucarionte)
-
-As organelas são estruturas especializadas, presentes apenas em células eucariontes, que compartimentalizam funções específicas dentro da célula:
-
-- **Núcleo:** armazena e protege o material genético (DNA); controla a atividade celular por meio da transcrição do DNA em RNA
-- **Retículo Endoplasmático Rugoso (RER):** possui ribossomos aderidos à sua membrana; responsável pela **síntese de proteínas** destinadas à exportação ou a outras organelas
-- **Retículo Endoplasmático Liso (REL):** não possui ribossomos; responsável pela **síntese de lipídios** e pela **desintoxicação** de substâncias (metabolização de fármacos e toxinas)
-- **Complexo de Golgi:** recebe proteínas e lipídios do retículo endoplasmático, realiza modificações finais, empacota e direciona essas moléculas para seu destino final (secreção, membrana ou outras organelas)
-- **Mitocôndrias:** responsáveis pela **respiração celular**, produzindo ATP (energia) a partir da quebra de moléculas orgânicas; possuem DNA próprio, o que reforça a teoria de que se originaram de bactérias ancestrais (teoria endossimbiótica)
-- **Ribossomos:** estruturas (livres no citoplasma ou aderidos ao RER) responsáveis pela **síntese de proteínas**, traduzindo a informação do RNA mensageiro
-- **Lisossomos:** contêm enzimas digestivas responsáveis pela **digestão intracelular** de partículas, organelas velhas e microrganismos invasores
-- **Peroxissomos:** realizam reações de oxidação, degradando ácidos graxos e neutralizando substâncias tóxicas, como o peróxido de hidrogênio (H₂O₂)
-- **Vacúolos:** estruturas de armazenamento; em células vegetais, o vacúolo central controla a **pressão de turgor**, além de armazenar água, íons e substâncias de reserva
-- **Cloroplastos:** exclusivos de células vegetais e algas; responsáveis pela **fotossíntese**, convertendo energia luminosa em energia química (glicose); assim como as mitocôndrias, possuem DNA próprio (origem endossimbiótica)
-- **Citoesqueleto:** rede de filamentos proteicos (microtúbulos, microfilamentos e filamentos intermediários) que dá suporte estrutural à célula, permite seu movimento e organiza o transporte interno de organelas
 
 ---
 
@@ -244,4 +174,3 @@ O padrão de potabilidade da água para consumo humano no Brasil passou por trê
   - Mudanças na frequência de monitoramento da **turbidez** pós-desinfecção
   - Novos valores máximos permitidos (VMP) para **cianotoxinas** e para **subprodutos da cloração**
   - Ajustes nas definições, nas responsabilidades dos órgãos e responsáveis pelo abastecimento (incluindo carros-pipa), e no plano de amostragem
-
